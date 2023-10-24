@@ -1,12 +1,11 @@
-# create a code that sums the numbers together in a file
-myFile = "C:\\Users\\jexer\\OneDrive\\Desktop\\Object Oriented Programming\\1019-main\\sample.txt"
-num = 0
-with open(myFile) as fh:
-    for n in fh:
-        n = n.strip()
-        nums = n.split()
-        for ns in nums:
-            sum = sum + int(ns)
+# create a code that counts the total number of vowels in the "sample.txt" file
 
+vowels = "aeiou"
+count = 0
 
-print(f"The sum of the numbers in the sample.ini file is: {sum}")
+with open("sample.txt", "r") as file:
+    for i in file.read():
+        if i.lower() in vowels:
+            count += 1
+
+print("The number of vowels in the sample.txt file is", count)
